@@ -40,7 +40,8 @@
         </view>
       </view>
       <view class='step-share'>分享给好友，请他助力</view>
-      <view class='step-mark'>剩余时间9天9小时,打败了全国<text>89%</text>的跑友,TOP10可获得直通名额</view>
+      <view class='step-mark'>剩余时间9天9小时,打败了全国
+        <text>89%</text>的跑友,TOP10可获得直通名额</view>
       <view class='banner2'>
         <image src='/resources/images/banner2.png'></image>
         <view></view>
@@ -56,7 +57,45 @@
     </view>
   </block>
   <block wx:elif="{{ curNavIndex == 1 }}">
-    排行榜
+    <!-- 排行榜 -->
+    <view>
+      <view class='myRank'>
+        <view class='list'>
+          <view class='ranking'>99</view>
+          <image class='logo' src='/resources/images/banner1.png'></image>
+          <view class='name'>三大发生的发生的发生大发生的发生的发生大发生的发生的发生的</view>
+          <view class='num'>99999</view>
+        </view>
+      </view>
+      <view class='rankList'>
+        <view class='lists'>
+          <view class='list'>
+            <view class='ranking'>99</view>
+            <image class='logo' src='/resources/images/banner1.png'></image>
+            <view class='name'>三大发生的发生的发生大发生的发生的发生大发生的发生的发生的</view>
+            <view class='num'>99999</view>
+          </view>
+          <view class='list'>
+            <view class='ranking'>99</view>
+            <image class='logo' src='/resources/images/banner1.png'></image>
+            <view class='name'>三大发生的发生的发生大发生的发生的发生大发生的发生的发生的</view>
+            <view class='num'>99999</view>
+          </view>
+          <view class='list'>
+            <view class='ranking'>99</view>
+            <image class='logo' src='/resources/images/banner1.png'></image>
+            <view class='name'>三大发生的发生的发生大发生的发生的发生大发生的发生的发生的</view>
+            <view class='num'>99999</view>
+          </view>
+          <view class='list'>
+            <view class='ranking'>99</view>
+            <image class='logo' src='/resources/images/banner1.png'></image>
+            <view class='name'>三大发生的发生的发生大发生的发生的发生大发生的发生的发生的</view>
+            <view class='num'>99999</view>
+          </view>
+        </view>
+      </view>
+    </view>
   </block>
   <block wx:else>
     活动规则

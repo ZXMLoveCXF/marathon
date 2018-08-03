@@ -113,6 +113,76 @@
 
 
 
+.myRank{
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #333134;
+  color: black;
+}
+.myRank .list{
+  padding: 20rpx 30rpx;
+  border: 5rpx solid #e32e44;
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.myRank .list .ranking{
+}
+.myRank .list .logo{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+.myRank .list .name{
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.myRank .list .num{
+  font-size: 32rpx;
+}
+
+.rankList{
+  padding: 20rpx 30rpx;
+  color: black;
+}
+.rankList .lists{
+  padding: 0 30rpx;
+  border: 5rpx solid #e32e44;
+  border-radius: 60rpx;
+  background-color: white;
+}
+.rankList .list{
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #e0e0e0;
+  padding: 30rpx 0;
+}
+.rankList .list:last-child{
+  border-bottom: 0;
+}
+.rankList .list .ranking{
+}
+.rankList .list .logo{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+.rankList .list .name{
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rankList .list .num{
+  font-size: 32rpx;
+}
+
+
+
 
 
 

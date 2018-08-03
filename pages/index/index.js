@@ -9,7 +9,7 @@ Page({
       { title: '排行榜', active: false, sign: 'ingList' },
       { title: '活动规则', active: false, sign: 'endList' }
     ],
-    curNavIndex: 0, // 当前tab索引
+    curNavIndex: 1, // 当前tab索引
   },
   
 
