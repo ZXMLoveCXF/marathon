@@ -6,9 +6,6 @@ App({
   config: config,
   util: util,
   isAllowLogin: false, //用户是否授权了获取信息
-  globalData: {
-    imgResources: '../../../../resources/images/'
-  },
   onLaunch: function () {
     console.log('---------------------------- onLaunch --------------------------------')
     //登录一次

@@ -1,1 +1,11 @@
 <!--pages/mine/mine.wxml-->
+<view class='banner'>
+  <image mode='widthFix' class='bg' src='{{ imgPath }}banner.png'></image>
+  <view class='face'>
+    <image src='{{ imgPath }}face.png'></image>
+    <view>跑不胖的瘦子</view>
+  </view>
+</view>
+<view class='container'>
+
+</view>
