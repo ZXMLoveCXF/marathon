@@ -1,0 +1,64 @@
+<view>
+  <image class='banner' mode='widthFix' src='/resources/images/banner1.png'></image>
+
+  <view class="navbar {{ bIsFixed ? 'fixed' : '' }}">
+    <view class="inner">
+      <block wx:for="{{navData}}" wx:for-item="nav">
+        <view data-index="{{index}}" bindtap="switchNavData" class="nav {{nav.active ? 'active' : ''}}">
+          <text>{{nav.title}}</text>
+          <view wx:if="{{ nav.active }}" class='underLine'></view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <block wx:if="{{ curNavIndex == 0 }}">
+    <!-- 计步中心 -->
+    <view>
+      <view class='stepBox'>
+        <view class='step-side'>
+          <text>1231212</text>
+          <text>总累计步数</text>
+        </view>
+        <view class='step-center'>
+          <view class='data'>
+            <text class='val'>1231212</text>
+            <view class='key'>
+              <image></image>
+              <text>今日累计步数</text>
+            </view>
+          </view>
+          <view class='name'>
+            <image src='/resources/images/banner.png'></image>
+            <text>奔跑的胖子</text>
+            <image src='/resources/images/banner.png'></image>
+          </view>
+        </view>
+        <view class='step-side'>
+          <text>1231</text>
+          <text>今日步数</text>
+        </view>
+      </view>
+      <view class='step-share'>分享给好友，请他助力</view>
+      <view class='step-mark'>剩余时间9天9小时,打败了全国<text>89%</text>的跑友,TOP10可获得直通名额</view>
+      <view class='banner2'>
+        <image src='/resources/images/banner2.png'></image>
+        <view></view>
+      </view>
+      <view class='prizeBox'>
+        <image mode='widthFix' class='top' src='/resources/images/prize.png'></image>
+        <view class='lists'>
+          <prizeList img="/resources/images/banner.png" title="泡泡糖" number="20" condition="阿斯顿就是看到发牢骚打卡说的话饭卡就"></prizeList>
+          <prizeList img="/resources/images/banner.png" title="泡泡糖" number="20" condition="阿斯顿就是看到发牢骚打卡说的话饭卡就"></prizeList>
+          <prizeList img="/resources/images/banner.png" title="泡泡糖" number="20" condition="阿斯顿就是看到发牢骚打卡说的话饭卡就"></prizeList>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:elif="{{ curNavIndex == 1 }}">
+    排行榜
+  </block>
+  <block wx:else>
+    活动规则
+  </block>
+</view>

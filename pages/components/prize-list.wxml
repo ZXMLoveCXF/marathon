@@ -1,0 +1,14 @@
+<!--pages/components/prize-list.wxml-->
+<view class='list'>
+  <view class='img'>
+    <image src='{{ img }}'></image>
+  </view>
+  <view class='info'>
+    <view class='top'>
+      <view>{{ title }}</view>
+      <text>X{{ number }}</text>
+    </view>
+    <view class='center'>获得条件</view>
+    <view class='bottom'>{{ condition }}</view>
+  </view>
+</view>

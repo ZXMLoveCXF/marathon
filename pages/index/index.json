@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "计步中心",
+  "usingComponents": {
+    "prizeList": "../components/prize-list"
+  }
+}

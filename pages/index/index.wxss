@@ -1,0 +1,164 @@
+.banner{
+  width: 100%;
+  display: block;
+}
+.banner2{
+  width: 100%;
+  height: 193rpx;
+  position: relative;
+}
+.banner2 image{
+  width: 100%;
+  height: 193rpx;
+}
+.banner2 view{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50rpx;
+  background: linear-gradient(rgba( 0,0,0,0), rgba(0,0,0,1));
+}
+.stepBox{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.stepBox .step-side{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin-top: 180rpx;
+}
+.stepBox .step-center{
+  width: 360rpx;
+  height: 360rpx;
+  border-radius: 50%;
+  border: 2rpx solid #e32e44;
+  position: relative;
+}
+.stepBox .step-center .data{
+  width: 340rpx;
+  height: 340rpx;
+  border-radius: 50%;
+  margin: 10rpx;
+  background-color: #282629;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepBox .step-center .name{
+  position: absolute;
+  bottom: -2rpx;
+  left: 0;
+  width: 340rpx;
+  margin: 0 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx solid #535154;
+  border-radius: 100rpx;
+  background-color: #0b090b;
+  padding: 16rpx 0;
+  font-size: 26rpx;
+}
+
+.stepBox .step-center .name image:nth-child(1){
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  border: 5rpx solid #858485;
+  margin-right: 10rpx;
+}
+.stepBox .step-center .name image:nth-child(3){
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.stepBox .step-center .data .key image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.step-share{
+  background-color: #e32e44;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 0 30rpx;
+  border-radius: 50rpx;
+}
+
+.step-mark{
+  padding: 30rpx 0;
+  text-align: center;
+  font-size: 22rpx;
+}
+.step-mark text{
+  color: #e32e44;
+}
+
+.prizeBox{
+  background-color: black;
+}
+.prizeBox .top{
+  width: 100%;
+  padding: 30rpx 0;
+}
+.prizeBox .lists{
+  padding: 0 30rpx;
+}
+
+
+
+
+
+
+.navbar {
+  overflow: hidden;
+  z-index: 999;
+  width: 750rpx;
+  background-color: #0b090b;
+}
+
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar .inner {
+  display: flex;
+  height: 100rpx;
+}
+
+.navbar .inner .nav {
+  flex: 1;
+  height: 95rpx;
+  text-align: center;
+  position: relative;
+}
+
+.navbar .inner .nav .underLine {
+  background-color: #e32e44;
+  height: 5rpx;
+  width: 90rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar .inner .nav text {
+  display: inline-block;
+  height: 95rpx;
+  line-height: 95rpx;
+  color: #858485;
+}
+
+.navbar .inner .nav.active text {
+  color: white;
+  font-size: 30rpx;
+  font-weight: bold;
+}

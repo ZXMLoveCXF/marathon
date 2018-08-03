@@ -4,51 +4,51 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    navData: [
+      { title: '计步中心', active: true, sign: 'preList' },
+      { title: '排行榜', active: false, sign: 'ingList' },
+      { title: '活动规则', active: false, sign: 'endList' }
+    ],
+    curNavIndex: 0, // 当前tab索引
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+  
+
+  /**
+   * 顶部菜单切换
+   */
+  switchNavData: function (e) {
+    var _this = this
+    var dataset = e.currentTarget.dataset
+    var curNavIndex = dataset.index
+    var navData = _this.data.navData
+    for (var i = 0, len = navData.length; i < len; ++i) {
+      if (i == curNavIndex) {
+        navData[i].active = true
+      } else {
+        navData[i].active = false
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
     }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+    wx.setNavigationBarTitle({
+      title: navData[curNavIndex].title,
     })
+    switch (curNavIndex) {
+      case 0:
+        // that.getClubDetail();
+        break;
+      case 1:
+        // that.getClubAct(1);
+        break;
+      case 2:
+        // that.getClubImg(1);
+        break;
+    }
+    _this.setData({
+      navData: navData,
+      curNavIndex: curNavIndex
+    });
+  },
+
+  onLoad: function () {
+    
   }
 })
