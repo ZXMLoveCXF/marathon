@@ -1,0 +1,161 @@
+<!--pages/information/information.wxml-->
+<view class='notice'>
+  <image src='{{ imgPath }}what.png'></image>
+  请填写真实有效的个人信息,以免主委会报名失败
+</view>
+<form report-submit="true" bindsubmit="accept">
+  <view class='container'>
+    <view class='name'>
+      <view class='label'>
+        <p>姓</p>
+        <p>名</p>:
+      </view>
+      <view class='input'>
+        <input class='inputBox' name="username" type='text' placeholder='请输入报名人姓名' placeholder-class='gray' />
+      </view>
+    </view>
+
+    <view class='sex'>
+      <view class='label'>
+        <p>性</p>
+        <p>别</p>:
+      </view>
+      <picker class='input' bindchange="sexPicker" value="{{ nSex }}" range="{{ aSex }}">
+        <view class="inputBox {{ aSex[nSex]?'white':'gray' }}">
+          {{ aSex[nSex]?aSex[nSex]:'请选择' }}
+          <image class='arrow' src='{{ imgPath }}arrow.png'></image>
+        </view>
+      </picker>
+    </view>
+
+    <view class='idCard'>
+      <view class='label'>
+        <p>身</p>
+        <p>份</p>
+        <p>证</p>
+        <p>号</p>:
+      </view>
+      <view class='input'>
+        <input class='inputBox' name="idCard" type='text' placeholder='请输入身份证号码' placeholder-class='gray' />
+      </view>
+    </view>
+
+    <view class='phone'>
+      <view class='label'>
+        <p>手</p>
+        <p>机</p>
+        <p>号</p>
+        <p>码</p>:
+      </view>
+      <view class='input'>
+        <input class='inputBox' name="phone" type='text' placeholder='请输入手机号码' placeholder-class='gray' />
+      </view>
+    </view>
+
+    <view class='detailAdd'>
+      <view class='label'>
+        <p>通</p>
+        <p>讯</p>
+        <p>地</p>
+        <p>址</p>:
+      </view>
+      <view class='input'>
+        <picker mode="region" bindchange="regionPicker" value="{{ aRegion }}">
+          <view class="inputBox {{ (aRegion.length == 0)?'gray':'white' }}">
+            {{ (aRegion.length == 0)?'请选择所在城市':(aRegion[0] + ' ' + aRegion[1] + ' ' + aRegion[2]) }}
+          </view>
+          <image class='arrow' src='{{ imgPath }}arrow.png'></image>
+        </picker>
+        <view class='input' style='margin: 0;'>
+          <input class='inputBox' name="detailAdd" type='text' placeholder='请输入详细地址' placeholder-class='gray' />
+        </view>
+      </view>
+    </view>
+
+    <view class='zipCode'>
+      <view class='label'>
+        <p>邮</p>
+        <p>政</p>
+        <p>编</p>
+        <p>码</p>:
+      </view>
+      <view class='input'>
+        <input class='inputBox' name="zipCode" type='number' maxlength='6' placeholder='请输入6位邮政编码' placeholder-class='gray' />
+      </view>
+    </view>
+
+    <view class='cloth'>
+      <view class='label'>
+        <p>上</p>
+        <p>装</p>
+        <p>尺</p>
+        <p>寸</p>:
+      </view>
+      <picker class='input' bindchange="clothPicker" value="{{ nCloth }}" range="{{ aCloth }}">
+        <view class="inputBox {{ aCloth[nCloth]?'white':'gray' }}">
+          {{ aCloth[nCloth]?aCloth[nCloth]:'请选择' }}
+          <image class='arrow' src='{{ imgPath }}arrow.png'></image>
+        </view>
+      </picker>
+    </view>
+
+    <view class='pants'>
+      <view class='label'>
+        <p>下</p>
+        <p>装</p>
+        <p>尺</p>
+        <p>寸</p>:
+      </view>
+      <picker class='input' bindchange="pantsPicker" value="{{ nPants }}" range="{{ aPants }}">
+        <view class="inputBox {{ aPants[nPants]?'white':'gray' }}">
+          {{ aPants[nPants]?aPants[nPants]:'请选择' }}
+          <image class='arrow' src='{{ imgPath }}arrow.png'></image>
+        </view>
+      </picker>
+    </view>
+
+    <view class='shoes'>
+      <view class='label'>
+        <p>鞋</p>
+        <p>码</p>:
+      </view>
+      <picker class='input' bindchange="shoesPicker" value="{{ nShoes }}" range="{{ aShoes }}">
+        <view class="inputBox {{ aShoes[nShoes]?'white':'gray' }}">
+          {{ aShoes[nShoes]?aShoes[nShoes]:'请选择' }}
+          <image class='arrow' src='{{ imgPath }}arrow.png'></image>
+        </view>
+      </picker>
+    </view>
+
+    <view class='VIP'>
+      <view class='label'>
+        <p>紧</p>
+        <p>急</p>
+        <p>联</p>
+        <p>系</p>
+        <p>人</p>:
+      </view>
+      <view class='input'>
+        <input class='inputBox' name="VIP" type='text' placeholder='请输入紧急联系人' placeholder-class='gray' />
+      </view>
+    </view>
+
+    <view class='VIPPhone'>
+      <view class='label'>
+        <p>紧</p>
+        <p>急</p>
+        <p>联</p>
+        <p>系</p>
+        <p>电</p>
+        <p>话</p>:
+      </view>
+      <view class='input'>
+        <input class='inputBox' name="VIPPhone" type='text' placeholder='请输入紧急联系电话' placeholder-class='gray' />
+      </view>
+    </view>
+
+  </view>
+  <view class='accept'>
+    <button formType="submit">确定领取</button>
+  </view>
+</form>

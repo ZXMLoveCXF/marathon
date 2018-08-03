@@ -31,5 +31,49 @@
 }
 .lightLine{
   height: 1rpx;
-  background-color: rgba(255,255,255,.1)
+  background-color: rgba(255,255,255,.1);
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.item .icon image{
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle
+}
+.item .title{
+  flex: 1;
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+}
+.item .arrow image{
+  width: 20rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+.join{
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0
+}
+.join .btnBg{
+    background-color: #000;
+    box-sizing: border-box;
+    padding: 20rpx 30rpx;
+}
+.join .joinText{
+  margin-bottom: 20rpx;
+}
+.join .btn{
+  background-color: #e32e44;
+  height: 80rpx;
+  border-radius: 50rpx;
+  line-height: 80rpx;
 }
