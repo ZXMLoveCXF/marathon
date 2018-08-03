@@ -7,5 +7,49 @@
   </view>
 </view>
 <view class='container'>
+  <view class='item'>
+    <view class='icon'>
+      <image src='{{ imgPath }}person.png'></image>
+    </view>
+    <view class='title'>
+      好友助力榜
+    </view>
+    <view class='arrow'>
+      <image src='{{ imgPath }}arrow.png'></image>
+    </view>
+  </view>
+  <view class='lightLine'></view>
 
+  <view class='item'>
+    <view class='icon'>
+      <image src='{{ imgPath }}present.png'></image>
+    </view>
+    <view class='title'>
+      奖品记录
+    </view>
+    <view class='arrow'>
+      <image src='{{ imgPath }}arrow.png'></image>
+    </view>
+  </view>
+  <view class='lightLine'></view>
+
+  <view class='item'>
+    <view class='icon'>
+      <image src='{{ imgPath }}rule.png'></image>
+    </view>
+    <view class='title'>
+      规则说明
+    </view>
+    <view class='arrow'>
+      <image src='{{ imgPath }}arrow.png'></image>
+    </view>
+  </view>
+  <view class='lightLine'></view>
+</view>
+
+<view class='join'>
+  <view class='joinText'>加入特步跑步俱乐部,成为特跑族,享受更多福利!</view>
+  <view class='btnBg'>
+    <view class='btn'>点击加入</view>
+  </view>
 </view>
