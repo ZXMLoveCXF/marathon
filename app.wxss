@@ -11,4 +11,5 @@
 page{
   background-color: #1c1a1d;
   font-size: 30rpx;
+  color: #fff
 }
